@@ -46,3 +46,9 @@ group :development do
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem 'better_errors', '~> 2.10', '>= 2.10.1'
+
+gem 'devise', '~> 4.9', '>= 4.9.3'
+
+gem 'cancancan', '~> 3.5'
