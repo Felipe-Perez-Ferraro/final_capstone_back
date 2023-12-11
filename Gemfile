@@ -51,4 +51,8 @@ gem 'better_errors', '~> 2.10', '>= 2.10.1'
 
 gem 'devise', '~> 4.9', '>= 4.9.3'
 
+gem 'devise-jwt', '~> 0.11.0'
+
+gem 'jsonapi-serializer', '~> 2.2'
+
 gem 'cancancan', '~> 3.5'
