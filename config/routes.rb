@@ -17,13 +17,13 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :users do
-        resources :boats do
-          resources :reservations
-        end
+      resources :users
+      resources :boats do
+        resources :reservations
       end
     end
   end
+  
 
   # Defines the root path route ("/")
   # root "posts#index"
