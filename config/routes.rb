@@ -22,5 +22,7 @@ Rails.application.routes.draw do
       resources :reservations
     end
   end
+  # Defines the root path route ("/")
+  # root "posts#index"
 end
  
