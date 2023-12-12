@@ -16,4 +16,10 @@ class Api::V1::BoatsController < ApplicationController
   rescue StandardError => e
     render json: { status: 'error', message: e.message }, status: :internal_server_error
   end
+
+  # DELETE /api/v1/boats/:id
+  def destroy
+    boat = Boat.find(params[:id])
+    boat.destroy!
+  end
 end
