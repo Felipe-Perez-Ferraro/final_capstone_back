@@ -9,5 +9,4 @@ class Boat < ApplicationRecord
   validates :rent_price, presence: true, numericality: { greater_than: 0 }
   validates :reserved, inclusion: { in: [true, false] }
   validates :user_id, presence: true
-  validates :picture, presence: true
 end
