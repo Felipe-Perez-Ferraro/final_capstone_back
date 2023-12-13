@@ -2,7 +2,13 @@ class Api::V1::ReservationsController < ApplicationController
   def index
     @reservations = Reservation.includes(:boat).all
 
-    render json: @reservations.as_json(include: { boat: { only: :name } })
+    render json: @reservations
+  end
+
+  def show 
+    reservation = Reservation.find(params[:id])
+
+    render json: reservation
   end
 
   def create
