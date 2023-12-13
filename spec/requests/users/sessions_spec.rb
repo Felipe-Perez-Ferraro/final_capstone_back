@@ -1,9 +1,7 @@
 require 'swagger_helper'
 
 RSpec.describe 'users/sessions', type: :request do
-
   path '/login' do
-
     get('new session') do
       tags 'User Login'
       response(200, 'successful') do
@@ -35,7 +33,7 @@ RSpec.describe 'users/sessions', type: :request do
           },
           required: [:user]
         }
-        
+
         let(:user) { { name: 'API Test' } }
 
         after do |example|

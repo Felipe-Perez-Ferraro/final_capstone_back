@@ -5,7 +5,6 @@ RSpec.describe 'api/v1/boats', type: :request do
     get('list boats') do
       tags 'Boats Controller'
       response(200, 'successful') do
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -20,7 +19,6 @@ RSpec.describe 'api/v1/boats', type: :request do
     post('create boat') do
       tags 'Boats Controller'
       response(200, 'successful') do
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -52,7 +50,7 @@ RSpec.describe 'api/v1/boats', type: :request do
         run_test!
       end
     end
-    
+
     delete('delete boat') do
       tags 'Boats Controller'
       response(200, 'successful') do
