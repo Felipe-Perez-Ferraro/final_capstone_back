@@ -1,8 +1,8 @@
 class Api::V1::ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.includes(:boat).all
 
-    render json: @reservations
+    render json: @reservations.as_json(include: { boat: { only: :name } })
   end
 
   def create
