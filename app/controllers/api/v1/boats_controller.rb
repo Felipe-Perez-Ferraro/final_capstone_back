@@ -22,4 +22,21 @@ class Api::V1::BoatsController < ApplicationController
     boat = Boat.find(params[:id])
     boat.destroy!
   end
+
+  # POST /api/v1/boats
+  def create
+    boat = Boat.new(boat_params)
+    if boat.save
+      render json: { status: 'success', data: boat }, status: :created
+    else
+      render json: { status: 'error', message: boat.errors }, status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def boat_params
+    params.require(:boat).permit(:name, :description, :price, :color, :rent_price, :reserved, :user_id, :picture)
+  end
+
 end
