@@ -36,8 +36,6 @@ paths:
                   type: string
                 rent_price:
                   type: decimal
-                reserved:
-                  type: boolean
                 user_id:
                   type: integer
                 picture:
@@ -48,7 +46,6 @@ paths:
               - price
               - color
               - rent_price
-              - reserved
               - user_id
               - picture
   "/api/v1/boats/{id}":
