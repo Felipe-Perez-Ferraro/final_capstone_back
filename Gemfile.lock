@@ -50,11 +50,6 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    active_model_serializers (0.10.14)
-      actionpack (>= 4.1)
-      activemodel (>= 4.1)
-      case_transform (>= 0.2)
-      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (7.1.2)
       activesupport (= 7.1.2)
       globalid (>= 0.3.6)
@@ -94,8 +89,6 @@ GEM
       msgpack (~> 1.2)
     builder (3.2.4)
     cancancan (3.5.0)
-    case_transform (0.2)
-      activesupport
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     crass (1.0.6)
@@ -136,7 +129,6 @@ GEM
     json (2.7.1)
     json-schema (4.1.1)
       addressable (>= 2.8)
-    jsonapi-renderer (0.2.2)
     jsonapi-serializer (2.2.0)
       activesupport (>= 4.2)
     jwt (2.7.1)
@@ -299,7 +291,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  active_model_serializers
   better_errors (~> 2.10, >= 2.10.1)
   bootsnap
   cancancan (~> 3.5)
