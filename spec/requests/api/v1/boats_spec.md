@@ -28,11 +28,10 @@ RSpec.describe 'api/v1/boats', type: :request do
             price: { type: :decimal },
             color: { type: :string },
             rent_price: { type: :decimal },
-            reserved: { type: :boolean },
             user_id: { type: :integer },
             picture: { type: :string }
           },
-          required: %w[name description price color rent_price reserved user_id picture]
+          required: %w[name description price color rent_price user_id picture]
         }
         after do |example|
           example.metadata[:response][:content] = {
