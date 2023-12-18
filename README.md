@@ -88,13 +88,15 @@ Link to the [Front End Repository](https://github.com/Felipe-Perez-Ferraro/final
 
 Link for the [Kanban Board](https://github.com/users/Felipe-Perez-Ferraro/projects/2/views/1)
 
+The Initial state of the Kanban Board:
+
 ![Kanban Board - Initial state](./kanbanboard.png)
 
 The 3 team members:
 
-- Ulises Cappa: @ulises2607 
-- Hajnalka Oltyan: @hajnaloltyan 
-- Felipe Perez Ferraro: @Felipe-Perez-Ferraro 
+- [Ulises Cappa](https://github.com/ulises2607)
+- [Hajnalka Oltyan](https://github.com/hajnaloltyan)
+- [Felipe Perez Ferraro](https://github.com/Felipe-Perez-Ferraro)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
