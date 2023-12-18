@@ -104,7 +104,7 @@ The 3 team members:
 
 ## 🚀 ERD <a name="front-end-part"></a>
 
-![ERD](./ERD.jpeg)
+![ERD](./ERD.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
