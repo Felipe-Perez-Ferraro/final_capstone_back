@@ -19,15 +19,13 @@ class Api::V1::BoatsController < ApplicationController
 
   # DELETE /api/v1/boats/:id
   def destroy
-    begin
-      boat = Boat.find(params[:id])
-      boat.destroy!
-      render json: { message: 'Boat successfully destroyed' }, status: :ok
-    rescue ActiveRecord::RecordNotFound
-      render json: { error: 'Boat not found' }, status: :not_found
-    rescue ActiveRecord::RecordNotDestroyed => e
-      render json: { error: "Failed to destroy boat: #{e.message}" }, status: :unprocessable_entity
-    end
+    boat = Boat.find(params[:id])
+    boat.destroy!
+    render json: { message: 'Boat successfully destroyed' }, status: :ok
+  rescue ActiveRecord::RecordNotFound
+    render json: { error: 'Boat not found' }, status: :not_found
+  rescue ActiveRecord::RecordNotDestroyed => e
+    render json: { error: "Failed to destroy boat: #{e.message}" }, status: :unprocessable_entity
   end
 
   # POST /api/v1/boats
