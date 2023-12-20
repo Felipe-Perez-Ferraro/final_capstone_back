@@ -1,0 +1,198 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/boats":
+    get:
+      summary: list boats
+      tags:
+      - Boats Controller
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create boat
+      tags:
+      - Boats Controller
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                price:
+                  type: decimal
+                color:
+                  type: string
+                rent_price:
+                  type: decimal
+                user_id:
+                  type: integer
+                picture:
+                  type: string
+              required:
+              - name
+              - description
+              - price
+              - color
+              - rent_price
+              - user_id
+              - picture
+  "/api/v1/boats/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show boats
+      tags:
+      - Boats Controller
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete boat
+      tags:
+      - Boats Controller
+      responses:
+        '200':
+          description: successful
+  "/api/v1/reservations":
+    get:
+      summary: list reservations
+      tags:
+      - Reservations Controller
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create reservation
+      tags:
+      - Reservations Controller
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                city:
+                  type: string
+                date:
+                  type: string
+                boat_id:
+                  type: integer
+              required:
+              - name
+              - city
+              - date
+              - boat_id
+  "/api/v1/reservations/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show reservation
+      tags:
+      - Reservations Controller
+      responses:
+        '200':
+          description: successful
+  "/signup/sign_up":
+    get:
+      summary: new registration
+      tags:
+      - Users Registration
+      responses:
+        '200':
+          description: successful
+  "/signup":
+    post:
+      summary: create registration
+      tags:
+      - Users Registration
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                  required:
+                  - name
+              required:
+              - user
+  "/login":
+    get:
+      summary: new session
+      tags:
+      - User Login
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create session
+      tags:
+      - User Login
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                  required:
+                  - name
+              required:
+              - user
+  "/api/v1/users":
+    get:
+      summary: list users
+      tags:
+      - Users Controller
+      responses:
+        '200':
+          description: successful
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: 127.0.0.1:3001/
